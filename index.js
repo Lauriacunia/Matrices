@@ -97,3 +97,20 @@ const generarGrilla = (filas, columnas, array) => {
   }
 
 //console.log(generarGrilla(2, 3, items))
+
+
+const generarMatrizEscalonada = (filas, item) => {
+
+    let matrizEscalonada = []
+
+    for (let i = 0; i < filas ; i++) {   
+        matrizEscalonada[i] = []  // creo array dentro de la fila 
+        console.log(`estas en la fila ${i}`)
+        for (let j = 0; j < matrizEscalonada.length ; j++) {  
+            matrizEscalonada[i].length = j + 1
+            matrizEscalonada[i][j] = item          
+        }      
+    }   
+    return matrizEscalonada
+}
+//console.log(generarMatrizEscalonada(5, "0"))
