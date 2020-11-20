@@ -1,7 +1,3 @@
-/**
- * ObtenerNumeroMayor
- * ◇⌒♥⌒♡⌒♥⌒♡⌒♥⌒♡⌒◇
- */
 
 const array2d = [
     [2, 7, 12, 1],
@@ -15,6 +11,18 @@ const arrayParaSumar = [
     [2, 7, 1],
     [8, 10],
   ];
+
+const matrizCuadrada = [
+    [4, 5, 9],
+    [2, 7, 1],
+    [8, 10, 5],
+  ]
+
+const matrizNoCuadrada = [
+    [4, 5],
+    [2, 7, 1],
+    [8, 10],
+  ]
 
 
 const obtenerNumeroMayor = (matriz) => {
@@ -47,4 +55,21 @@ const sumar = (matriz) => {
 }
 
 
-console.log(sumar(arrayParaSumar))
+//console.log(sumar(arrayParaSumar))
+
+
+const esMatrizCuadrada = (matriz) => {
+    // Si una fila no tiene la misma
+    //longitud que el array --> no es cuadrada
+    for (let i = 0; i < matriz.length; i++) { //recorro filas
+    
+        if(matriz.length !== matriz[i].length){
+            return false  // cierra la iteracion
+        }
+     return true
+    }
+}
+
+//console.log(esMatrizCuadrada(matrizCuadrada))
+
+//console.log(esMatrizCuadrada(matrizNoCuadrada))
