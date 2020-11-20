@@ -10,6 +10,13 @@ const array2d = [
     [22, 3, 24, 4],
 ];
 
+const arrayParaSumar = [
+    [4, 5],
+    [2, 7, 1],
+    [8, 10],
+  ];
+
+
 const obtenerNumeroMayor = (matriz) => {
     let nroMayor = ""
     for (let i = 0; i < matriz.length; i++) {
@@ -26,6 +33,18 @@ const obtenerNumeroMayor = (matriz) => {
     return nroMayor
 }
 
+//console.log(obtenerNumeroMayor(array2d))
+
+const sumar = (matriz) => {
+    let suma = 0
+    for (let i = 0; i < matriz.length; i++) {
+           for (let j = 0; j < matriz[i].length; j++) {             
+                suma += matriz[i][j]
+           }      
+    }   
+    return suma
+
+}
 
 
-console.log(obtenerNumeroMayor(array2d))
+console.log(sumar(arrayParaSumar))
