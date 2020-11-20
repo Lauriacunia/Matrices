@@ -24,6 +24,17 @@ const matrizNoCuadrada = [
     [8, 10],
   ]
 
+const items = ['🍉', '🍐', '🍌', '🍇', '🍎', '🍊', '🍉', 
+  '🍏', '🍑', '🍒', '🥝', '🍋', '🍓', '🍍', '🥥']
+
+  
+const obtenerNumeroAlAzar = (array) => {
+    return Math.floor((Math.random() * array.length))
+  }
+
+const obtenerItemAlAzar = (array) => {
+    return array[obtenerNumeroAlAzar(array)]
+}
 
 const obtenerNumeroMayor = (matriz) => {
     let nroMayor = ""
@@ -73,3 +84,16 @@ const esMatrizCuadrada = (matriz) => {
 //console.log(esMatrizCuadrada(matrizCuadrada))
 
 //console.log(esMatrizCuadrada(matrizNoCuadrada))
+
+const generarGrilla = (filas, columnas, array) => {
+    const grilla = []
+    for (let i = 0; i < filas; i++) {
+      grilla[i] = []
+      for (let j = 0; j < columnas; j++) {
+        grilla[i][j] = obtenerItemAlAzar(array)
+      }
+    }
+    return grilla
+  }
+
+//console.log(generarGrilla(2, 3, items))
